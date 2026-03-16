@@ -23,7 +23,7 @@ function HeroSection() {
     };
 
     return (
-        <section className="relative min-h-screen pt-32 pb-32 bg-gradient-to-br from-blue-900 via-blue-900 to-blue-900 overflow-hidden">
+        <section className="relative min-h-screen pt-32 pb-16 bg-gradient-to-br from-blue-900 via-blue-900 to-blue-900 overflow-hidden">
             {/* Premium overlays */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-30"></div>
@@ -142,7 +142,7 @@ function HeroSection() {
 }
 function HighlightsSection() {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image Section */}
@@ -213,7 +213,7 @@ function ServicesPreview() {
     ];
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-12 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-4xl font-bold text-blue-800 mb-12 text-center">Our Services</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -282,10 +282,10 @@ function WhyChooseUs() {
     ];
 
     return (
-        <section className="py-18 bg-white">
+        <section className="py-2 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-20">
-                    <h2 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-4 motion-fade-in">Why Choose Capraise?</h2>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4 motion-fade-in">Why Choose Capraise?</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto motion-fade-in" style={{ animationDelay: '0.1s' }}>We deliver excellence through expertise, innovation, and personalized service</p>
                     <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-blue-400 to-transparent mx-auto mt-8"></div>
                 </div>
@@ -326,7 +326,7 @@ function WhyChooseUs() {
                         );
                     })}
                 </div>
-                <div className="mt-20 pt-16 border-t border-gray-200 text-center">
+                <div className="mt-20 pt-6 border-t border-gray-200 text-center">
                     <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4 motion-fade-in">Ready to Elevate Your Financial Strategy?</h3>
                     <p className="text-lg text-gray-600 mb-10 motion-fade-in" style={{ animationDelay: '0.1s' }}>Let's explore how Capraise can help you achieve your goals</p>
                     <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg motion-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -339,7 +339,7 @@ function WhyChooseUs() {
 }
 function CTASection() {
     return (
-        <section className="relative py-16 bg-gradient-to-br from-blue-600 via-blue-500 to-blue-600 text-white overflow-hidden">
+        <section className="relative py-6 bg-gradient-to-br from-blue-600 via-blue-500 to-blue-600 text-white overflow-hidden">
             <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
 
@@ -399,7 +399,7 @@ function WhoWeServe() {
     ];
 
     return (
-        <section className="py-20 bg-gradient-to-b from-white to-blue-50">
+        <section className="py-6 bg-gradient-to-b from-white to-blue-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-5xl font-bold text-slate-900 mb-4 motion-fade-in">Who We Serve</h2>
@@ -441,7 +441,7 @@ function WhoWeServe() {
                         );
                     })}
                 </div>
-                <div className="mt-16 pt-16 border-t border-gray-200 text-center">
+                <div className="mt-16 pt-8 border-t border-gray-200 text-center">
                     <h3 className="text-3xl font-bold text-slate-900 mb-4 motion-fade-in">Don't See Your Profile?</h3>
                     <p className="text-lg text-gray-600 mb-8 motion-fade-in" style={{ animationDelay: '0.1s' }}>
                         Every business is unique. Let's explore how Capraise can help your organization thrive.
@@ -457,7 +457,7 @@ function WhoWeServe() {
 
 function HomePage() {
     return (
-        <div>
+        <div className="w-full overflow-x-hidden">
             <HeroSection />
             <ServicesPreview />
             <WhyChooseUs />

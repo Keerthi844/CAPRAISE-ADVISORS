@@ -11,7 +11,7 @@ function Careers() {
           <h1 className="text-5xl font-bold text-blue-800 mb-4 motion-fade-in">
             Join Our Team
           </h1>
-          <p className="text-xl text-blue-700 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-700 max-w-3xl mx-auto motion-fade-in" style={{animationDelay: '0.2s'}}>
             Be part of a dynamic team changing the investment banking landscape.
           </p>
         </div>
@@ -161,7 +161,7 @@ function Careers() {
 
             <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border border-blue-200 hover:shadow-lg transition">
               <img
-                src="https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=400"
+                src="https://www.talentsapphire.com/uploads/1213/1694852593.jpg"
                 className="rounded-lg w-full h-40 object-cover mb-4"
                 alt="Skills"
               />
@@ -173,7 +173,7 @@ function Careers() {
 
             <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border border-blue-200 hover:shadow-lg transition">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400"
+                src="https://images.presentationgo.com/2025/06/diverse-business-team-collaboration.jpg"
                 className="rounded-lg w-full h-40 object-cover mb-4"
                 alt="Team"
               />

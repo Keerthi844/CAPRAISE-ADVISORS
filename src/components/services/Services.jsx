@@ -5,12 +5,20 @@ import { FiBriefcase, FiDollarSign, FiTrendingUp, FiZap, FiBox, FiUsers } from '
 // ServiceHero Component
 function ServiceHero() {
   return (
-    <section className="py-12 sm:py-20 bg-gradient-to-br from-blue-50 to-blue-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-800 mb-4 sm:mb-6 motion-fade-in">Our Services</h1>
-        <p className="text-base sm:text-lg lg:text-xl text-blue-700 max-w-3xl mx-auto motion-fade-in" style={{animationDelay: '0.2s'}}>Comprehensive financial and strategic solutions tailored to your unique business needs.</p>
-      </div>
-    </section>
+ <section className="pt-10 pb-4 bg-gradient-to-br from-blue-50 to-blue-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 className="text-3xl sm:text-4xl font-bold text-blue-800 mb-3 motion-fade-in">
+      Our Services
+    </h1>
+
+    <p
+      className="text-base sm:text-lg text-blue-700 max-w-2xl mx-auto motion-fade-in"
+      style={{ animationDelay: "0.2s" }}
+    >
+      Comprehensive financial and strategic solutions tailored to your unique business needs.
+    </p>
+  </div>
+</section>
   );
 }
 
@@ -20,7 +28,6 @@ const clientSegmentsData = {
     title: 'Venture Capitalists & PE Firms',
     icon: FiBriefcase,
     shortDesc: 'Strategic partners in growth equity investments and portfolio management',
-    category: 'Who We Serve',
     description: 'We provide comprehensive support to venture capitalists and private equity firms in identifying, evaluating, and managing investment opportunities. Our services help you build strong portfolios and maximize returns through strategic partnerships.',
     overview: 'Our team assists with deal sourcing, due diligence, fund structuring, portfolio management, and strategic consulting. We leverage our extensive network to connect you with quality deal flow and help navigate complex investment landscapes.We assist VC and PE firms throughout the investment lifecycle—from deal sourcing and due diligence to portfolio management and exit strategies. Our deep industry insights and strong network enable us to connect investors with high-potential companies and emerging opportunities.',
     image: 'https://cdn.prod.website-files.com/66311b66e5ffd46956cf369b/66b141a052bb8aff3c125822_g68.png'
@@ -29,7 +36,7 @@ const clientSegmentsData = {
     title: 'Angel Investors & HNIs',
     icon: FiDollarSign,
     shortDesc: 'Wealth management and investment advisory for high net worth individuals',
-    category: 'Who We Serve',
+ 
     description: 'We deliver personalized wealth management and investment advisory services tailored to high net worth individuals and angel investors. Our team helps you identify promising opportunities and optimize your investment portfolio.',
     overview: 'We provide investment analysis, portfolio diversification strategies, tax-efficient planning, and deal introductions to promising startups and growth companies. Our approach ensures your investments align with your financial goals.Angel Investors and High Net Worth Individuals (HNIs) play a vital role in supporting early-stage and growth-stage businesses by providing capital, strategic guidance, and industry connections. At Capraise Advisors, we help angel investors and HNIs identify high-potential investment opportunities and build well-diversified portfolios aligned with their financial goals and risk appetite.',
     image: 'https://images.squarespace-cdn.com/content/v1/6553a295a49b8d1cc294179f/1715809188117-ERP39TA7Z0NP0AGL3SO9/wealth-management.jpg'
@@ -38,7 +45,6 @@ const clientSegmentsData = {
     title: 'Startups & Entrepreneurs',
     icon: FiTrendingUp,
     shortDesc: 'Fundraising guidance and business scaling support for growing companies',
-    category: 'Who We Serve',
     description: 'We are committed to helping startups and entrepreneurs navigate the challenging journey of building successful companies. Our comprehensive advisory services cover fundraising, growth strategy, and operational excellence.',
     overview: 'From business planning and pitch deck creation to investor introductions and term sheet negotiation, we provide end-to-end support. Our team helps you build scalable businesses and attract the right investors for your vision.We support startups at every stage of their journey—from idea validation and business planning to fundraising, market entry, and growth strategy. Our team works closely with entrepreneurs to develop strong business models, prepare investor-ready pitch decks, and connect them with the right investors including angel investors, venture capital firms, and private equity funds.',
     image: 'https://png.pngtree.com/thumb_back/fw800/background/20251102/pngtree-diverse-team-celebrating-a-successful-project-launch-with-confetti-in-modern-image_20204333.webp'
@@ -47,7 +53,6 @@ const clientSegmentsData = {
     title: 'Incubators & Accelerators',
     icon: FiZap,
     shortDesc: 'Advisory support for ecosystem players driving innovation',
-    category: 'Who We Serve',
     description: 'We collaborate with incubators and accelerators to strengthen the entrepreneurial ecosystem. Our services help acceleration programs enhance their value proposition and support portfolio companies effectively.',
     overview: 'We provide curriculum development, mentor network access, investor connect programs, and strategic advisory for your portfolio companies. Our expertise helps create a thriving innovation ecosystem and successful exits.Incubators and accelerators play a critical role in nurturing early-stage startups and strengthening the entrepreneurial ecosystem. At Capraise Advisors, we collaborate with incubators and accelerator programs to support startups with the financial, strategic, and operational guidance required to scale successfully.',
     image: 'https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AXbIWjQmujQppRFYVw_z7bA.jpeg'
@@ -56,7 +61,6 @@ const clientSegmentsData = {
     title: 'Established Corporations',
     icon: FiBox,
     shortDesc: 'Strategic advisory for expansion, restructuring, and optimization',
-    category: 'Who We Serve',
     description: 'We support established corporations in navigating complex business transformations. Our advisory services cover strategic expansion, M&A transactions, restructuring, and operational optimization.',
     overview: 'From identifying acquisition targets and managing M&A processes to restructuring operations and optimizing capital structures, we help corporations create value. Our team brings industry expertise and proven execution capabilities.Established corporations often face complex challenges while pursuing growth, expansion, and long-term value creation. At Capraise Advisors, we work closely with corporates to provide strategic financial advisory and transaction support that helps businesses adapt, grow, and remain competitive in dynamic markets.',
     image: 'https://www.investopedia.com/thmb/b9tGOj-_kOWs1JZbQBxQ0frzpoc%3D/1500x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29/SemivarianceMeaningFormulasandCalculationsGettyImages-1598549989-8a9f862c2362495aaca28aa5b59435ad.jpg'
@@ -65,7 +69,6 @@ const clientSegmentsData = {
     title: 'Family Offices',
     icon: FiUsers,
     shortDesc: 'Comprehensive wealth and investment management services',
-    category: 'Who We Serve',
     description: 'We provide sophisticated wealth management and investment advisory services tailored to family offices. Our approach integrates financial planning, investment management, and governance support.',
     overview: 'We assist with investment strategy, asset allocation, ESG considerations, succession planning, and family governance. Our experienced team helps preserve and grow multi-generational wealth while addressing complex family dynamics.Family offices manage and preserve the wealth of high-net-worth families across generations. At Capraise Advisors, we provide tailored advisory services that help family offices effectively manage their investments, optimize asset allocation, and achieve long-term financial goals.',
     image: 'https://archello.s3.eu-central-1.amazonaws.com/images/2022/10/12/alcove-design-consultants-private-wealth-management-client-offices-archello.1665593958.3422.jpg'
@@ -452,162 +455,55 @@ function VentureServicesGrid({ onSelectService }) {
     ...data
   }));
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? ventureServices.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === ventureServices.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const getVisibleCards = () => {
-    const visibleCount = 3;
-    const cards = [];
-    for (let i = 0; i < visibleCount; i++) {
-      const index = (currentIndex + i) % ventureServices.length;
-      cards.push(ventureServices[index]);
-    }
-    return cards;
-  };
-
   return (
     <div>
       <div className="text-center mb-12 sm:mb-16 px-3">
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Who We Serve</h2>
         <p className="text-sm sm:text-base text-gray-600">Tailored solutions for diverse client segments across the financial ecosystem</p>
       </div>
-      <div className="relative">
-        <button
-          onClick={goToPrevious}
-          className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-20 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hidden lg:flex items-center justify-center"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={goToNext}
-          className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-20 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hidden lg:flex items-center justify-center"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
 
-        {/* Cards Grid - 3 visible */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-2 sm:px-4">
-          {getVisibleCards().map((service, idx) => {
-            const IconComponent = service.icon;
-            const isActive = service.id === ventureServices[currentIndex].id;
-            return (
-              <div
-                key={service.id}
-                onClick={() => {
-                  const index = ventureServices.findIndex(s => s.id === service.id);
-                  setCurrentIndex(index);
-                }}
-                className={`group relative overflow-hidden rounded-xl transition-all duration-500 cursor-pointer transform ${
-                  isActive
-                    ? 'bg-blue-500 text-white shadow-xl scale-100 sm:scale-105 border-2 border-blue-600'
-                    : 'bg-white text-slate-900 border-2 border-gray-200 hover:border-blue-400 hover:shadow-lg'
-                }`}
-              >
-                {/* Image Background */}
-                <div className="relative h-32 sm:h-40 overflow-hidden bg-gray-200">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className={`w-full h-full object-cover transition-all duration-300 ${isActive ? 'scale-110 opacity-50' : 'group-hover:scale-105'}`}
-                  />
-                  {/* Overlay */}
-                  <div className={`absolute inset-0 ${isActive ? 'bg-blue-600/80' : 'bg-gradient-to-t from-black/40 to-transparent'}`}></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative z-10 p-3 sm:p-5 text-center">
-                  <div className={`text-xs font-semibold mb-2 px-2 py-1 rounded-full inline-block transition-colors duration-300 ${
-                    isActive ? 'bg-white/30 text-white' : 'bg-blue-100 text-blue-700'
-                  }`}>
-                    {service.category}
-                  </div>
-                  <div className={`text-3xl sm:text-4xl mb-2 sm:mb-3 transition-all duration-300 ${isActive ? 'text-white scale-110' : 'text-blue-600 group-hover:scale-110'}`}>
-                    <IconComponent size={40} />
-                  </div>
-                  <h3 className={`text-sm sm:text-base font-bold mb-1 transition-colors duration-300 ${isActive ? 'text-white' : 'text-slate-900'}`}>
-                    {service.title}
-                  </h3>
-                  <p className={`text-xs leading-snug transition-colors duration-300 ${isActive ? 'text-blue-50' : 'text-gray-600'}`}>
-                    {service.shortDesc}
-                  </p>
-
-                  {isActive && (
-                    <div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-white/30">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onSelectService(service.id);
-                        }}
-                        className="w-full py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 text-xs sm:text-sm"
-                      >
-                        View Details
-                      </button>
-                    </div>
-                  )}
-                </div>
-
-                {/* Active Indicator */}
-                {isActive && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center border-2 border-white shadow-lg">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                )}
+      {/* Cards Grid - All visible */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {ventureServices.map((service, idx) => {
+          const IconComponent = service.icon;
+          return (
+            <div
+              key={service.id}
+              onClick={() => onSelectService(service.id)}
+              className="group relative overflow-hidden rounded-xl transition-all duration-300 cursor-pointer bg-white border-4 border-gray-200 hover:bg-blue-50 hover:border-blue-400 hover:shadow-lg"
+            >
+              {/* Image Background */}
+              <div className="relative h-32 sm:h-40 overflow-hidden bg-gray-200">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
-            );
-          })}
-        </div>
-      </div>
 
-      {/* Mobile Navigation Buttons */}
-      <div className="flex lg:hidden justify-center gap-3 mt-6">
-        <button
-          onClick={goToPrevious}
-          className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={goToNext}
-          className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Carousel Indicators */}
-      <div className="flex justify-center gap-2 sm:gap-3 mt-8 sm:mt-12 flex-wrap">
-        {ventureServices.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`transition-all duration-300 rounded-full ${
-              idx === currentIndex
-                ? 'w-6 sm:w-8 h-2 sm:h-3 bg-blue-600'
-                : 'w-2 sm:w-3 h-2 sm:h-3 bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
+              {/* Content */}
+              <div className="relative z-10 p-3 sm:p-5 text-center">
+                <div className="text-xs font-semibold mb-3 px-2 py-1 rounded-full inline-block bg-blue-100 text-blue-700">
+                  {service.category}
+                </div>
+                
+                {/* Icon in the middle with hover effect */}
+                <div className="mb-3 sm:mb-4 transition-all duration-300">
+                  <IconComponent size={48} className="inline-block text-blue-600 group-hover:text-blue-500 transition-colors duration-300" />
+                </div>
+                
+                <h3 className="text-sm sm:text-base font-bold mb-1 text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-xs leading-snug text-gray-600">
+                  {service.shortDesc}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -718,14 +614,14 @@ function ServicesPage() {
       <ServiceHero />
 
       {/* Main Services Section */}
-      <section id="main-services-section" className="py-8 sm:py-12 lg:py-16 bg-white">
+      <section id="main-services-section" className="py-8 sm:py-10 lg:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           <MainServicesGrid onSelectService={setSelectedService} />
         </div>
       </section>
 
       {/* Venture Services Section */}
-      <section id="venture-services-section" className="py-8 sm:py-12 lg:py-16 bg-gradient-to-b from-gray-50 to-white">
+      <section id="venture-services-section" className="py-8 sm:py-10 lg:py-12 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           <VentureServicesGrid onSelectService={setSelectedVentureService} />
         </div>

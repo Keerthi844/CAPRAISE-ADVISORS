@@ -100,8 +100,8 @@ return (
     {/* Hero Section */}
     <section className="pt-16 pb-6 bg-gradient-to-br from-blue-50 to-blue-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 className="text-5xl font-bold text-blue-800 mb-4">Get In Touch</h1>
-      <p className="text-xl text-blue-700 max-w-3xl mx-auto">
+      <h1 className="text-5xl font-bold text-blue-800 mb-4 motion-fade-in">Get In Touch</h1>
+      <p className="text-xl text-blue-700 max-w-3xl mx-auto motion-fade-in" style={{animationDelay: '0.2s'}}>
         Let's discuss how we can help your business succeed
       </p>
     </div>

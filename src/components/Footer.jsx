@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 function Footer() {
   const socialLinks = [
@@ -59,8 +59,6 @@ function Footer() {
               <li><Link to="/services" className="hover:text-white transition">Services</Link></li>
               <li><Link to="/team" className="hover:text-white transition">Team</Link></li>
               <li><Link to="/careers" className="hover:text-white transition">Careers</Link></li>
-              
-
             </ul>
           </div>
           <div>
@@ -71,8 +69,25 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex flex-col items-end justify-start">
+          {/* Contact Us Section */}
+          <div>
+            <h4 className="text-lg font-bold mb-4">Contact Us</h4>
+            <div className="space-y-4 text-blue-100 mb-6">
+              <div className="flex items-start gap-3">
+                <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-white" size={16} />
+                <p className="text-sm">Office 2nd Floor, Sriram plaza Vittal Rao Nagar, Madhapur, Hyderabad.</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="flex-shrink-0 text-white" size={16} />
+                <a href="mailto:support@capraiseadvisors.com" className="text-sm hover:text-white transition">support@capraiseadvisors.com</a>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaPhone className="flex-shrink-0 text-white" size={16} />
+                <a href="tel:+919876543210" className="text-sm hover:text-white transition">+91 6305675199</a>
+              </div>
+            </div>
+
+            {/* Social Icons Below Contact */}
             <div className="flex flex-row gap-3">
               {socialLinks.map((link, index) => {
                 const IconComponent = link.icon;
@@ -94,6 +109,7 @@ function Footer() {
         </div>
         <div className="border-t border-blue-500 pt-8 text-center text-blue-100">
           <p>&copy; 2024 Capraise Advisors. All rights reserved.</p>
+          <p>Designed by Design Career Metrics</p>
         </div>
       </div>
     </footer>
