@@ -497,9 +497,17 @@ function VentureServicesGrid({ onSelectService }) {
                 <h3 className="text-sm sm:text-base font-bold mb-1 text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-xs leading-snug text-gray-600">
+                <p className="text-xs leading-snug text-gray-600 mb-3">
                   {service.shortDesc}
                 </p>
+
+                {/* Learn More Link */}
+                <div className="flex items-center justify-center gap-1 text-blue-600 font-semibold text-xs group-hover:text-blue-700 transition-colors duration-300">
+                  <span>Learn More</span>
+                  <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </div>
           );

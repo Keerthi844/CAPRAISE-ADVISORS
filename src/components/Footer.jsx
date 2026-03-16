@@ -109,7 +109,7 @@ function Footer() {
         </div>
         <div className="border-t border-blue-500 pt-8 text-center text-blue-100">
           <p>&copy; 2024 Capraise Advisors. All rights reserved.</p>
-          <p>Designed by Design Career Metrics</p>
+          <p>Designed by <a href="https://designcareermetrics.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition font-semibold">Design Career Metrics</a></p>
         </div>
       </div>
     </footer>
