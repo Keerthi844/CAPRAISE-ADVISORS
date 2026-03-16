@@ -133,7 +133,7 @@ return (
           </div>
           <div>
             <h4 className="font-semibold text-lg">Contact Numbers:</h4>
-            <p className="text-gray-600">+91-XXXXXXXXXX</p>
+            <p className="text-gray-600">+91-8985224309</p>
           </div>
         </div>
 

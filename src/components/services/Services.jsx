@@ -261,6 +261,14 @@ function MainServicesGrid({ onSelectService }) {
 
 // Sub Service Detail Modal Component
 function SubServiceDetailModal({ subService, onClose }) {
+  const scrollContainerRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+  }, [subService]);
+
   if (!subService) return null;
 
   return (
@@ -270,6 +278,7 @@ function SubServiceDetailModal({ subService, onClose }) {
     >
       <div className="flex items-center justify-center h-full p-4">
         <div
+          ref={scrollContainerRef}
           className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
@@ -331,6 +340,14 @@ function SubServiceDetailModal({ subService, onClose }) {
 
 // Service Detail Modal Component
 function ServiceDetailModal({ serviceId, onClose, onSelectSubService }) {
+  const scrollContainerRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+  }, [serviceId]);
+
   const service = mainServicesData[serviceId];
   if (!service) return null;
 
@@ -343,6 +360,7 @@ function ServiceDetailModal({ serviceId, onClose, onSelectSubService }) {
     >
       <div className="flex items-center justify-center h-full p-4">
         <div
+          ref={scrollContainerRef}
           className="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
@@ -577,6 +595,14 @@ function VentureServicesGrid({ onSelectService }) {
 
 // Venture Service Detail Modal
 function VentureServiceDetailModal({ serviceId, onClose }) {
+  const scrollContainerRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+  }, [serviceId]);
+
   const service = clientSegmentsData[serviceId];
   
   if (!service) return null;
@@ -584,7 +610,7 @@ function VentureServiceDetailModal({ serviceId, onClose }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-hidden">
       <div className="flex items-center justify-center h-full p-4">
-        <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto flex flex-col">
+        <div ref={scrollContainerRef} className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto flex flex-col">
           <div className="sticky top-0 flex justify-between items-center p-6 border-b bg-white rounded-t-lg flex-shrink-0">
           <h2 className="text-3xl font-bold text-slate-900">{service.title}</h2>
           <button

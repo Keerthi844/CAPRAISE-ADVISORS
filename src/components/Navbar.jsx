@@ -54,12 +54,12 @@ function Navbar() {
   {/* Mobile Menu */}
   {menuOpen && (
     <div className="md:hidden bg-white border-t">
-      <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</Link>
-      <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</Link>
-      <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</Link>
-      <Link to="/team" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Why Capraise Advisors</Link>
-      <Link to="/careers" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</Link>
-      <Link to="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</Link>
+      <Link to="/" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</Link>
+      <Link to="/about" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</Link>
+      <Link to="/services" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</Link>
+      <Link to="/team" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Why Capraise Advisors</Link>
+      <Link to="/careers" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</Link>
+      <Link to="/contact" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</Link>
     </div>
   )}
 </nav>
