@@ -5,7 +5,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-  <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 w-full">
+  <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-[9999] w-full">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
     <div className="flex justify-between h-16">
       
@@ -34,7 +34,7 @@ function Navbar() {
       <div className="md:hidden flex items-center">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-gray-700"
+          className="text-gray-700 p-2 rounded hover:bg-gray-100 transition"
         >
           {menuOpen ? (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
