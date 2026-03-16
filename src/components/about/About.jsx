@@ -262,9 +262,9 @@ function WeAspireToServe() {
           className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-hidden"
           onClick={() => setSelectedCard(null)}
         >
-          <div className="flex items-center justify-center w-full h-full p-4">
+          <div className="flex items-center justify-center w-full h-full p-4 pt-20 sm:pt-16">
             <div
-              className="bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto flex flex-col"
+              className="bg-white rounded-lg w-full max-w-2xl max-h-[calc(100vh-120px)] overflow-y-auto flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 sm:p-6 flex justify-between items-center flex-shrink-0 gap-2 z-10">
@@ -287,7 +287,7 @@ function WeAspireToServe() {
               </div>
               
               {/* Content */}
-              <div className="flex-1 p-4 sm:p-6 overflow-y-auto">
+              <div className="flex-1 p-4 sm:p-6 pt-6 sm:pt-8 overflow-y-auto">
                 <h4 className="text-base sm:text-lg font-bold text-slate-900 mb-3">Overview</h4>
                 <p className="text-xs sm:text-sm text-slate-700 mb-4 leading-relaxed">{cardDetails[selectedCard].description}</p>
                 

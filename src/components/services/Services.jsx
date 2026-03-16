@@ -5,10 +5,10 @@ import { FiBriefcase, FiDollarSign, FiTrendingUp, FiZap, FiBox, FiUsers } from '
 // ServiceHero Component
 function ServiceHero() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+    <section className="py-12 sm:py-20 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl font-bold text-blue-800 mb-6 motion-fade-in">Our Services</h1>
-        <p className="text-xl text-blue-700 max-w-3xl mx-auto motion-fade-in" style={{animationDelay: '0.2s'}}>Comprehensive financial and strategic solutions tailored to your unique business needs.</p>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-800 mb-4 sm:mb-6 motion-fade-in">Our Services</h1>
+        <p className="text-base sm:text-lg lg:text-xl text-blue-700 max-w-3xl mx-auto motion-fade-in" style={{animationDelay: '0.2s'}}>Comprehensive financial and strategic solutions tailored to your unique business needs.</p>
       </div>
     </section>
   );
@@ -229,7 +229,7 @@ function MainServicesGrid({ onSelectService }) {
   }));
 
   return (
-    <div ref={ServicesGridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div ref={ServicesGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
       {services.map((service, idx) => {
         const IconComponent = service.icon;
         return (
@@ -237,19 +237,19 @@ function MainServicesGrid({ onSelectService }) {
             key={service.id}
             id={`service-${service.id}`}
             onClick={() => onSelectService(service.id)}
-            className="motion-fade-in group bg-white p-8 rounded-lg border border-blue-200 hover:border-blue-500 hover:bg-blue-50 hover:shadow-xl transition-all duration-300 cursor-pointer"
+            className="motion-fade-in group bg-white p-6 sm:p-8 rounded-lg border border-blue-200 hover:border-blue-500 hover:bg-blue-50 hover:shadow-xl transition-all duration-300 cursor-pointer"
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg mb-6 group-hover:from-blue-200 group-hover:to-blue-100 transition-all">
-              <IconComponent className="w-8 h-8 text-blue-600" />
+            <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg mb-4 sm:mb-6 group-hover:from-blue-200 group-hover:to-blue-100 transition-all">
+              <IconComponent className="w-6 sm:w-8 h-6 sm:h-8 text-blue-600" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+            <h3 className="text-lg sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
               {service.title}
             </h3>
-            <p className="text-gray-600 mb-4 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
               {service.description}
             </p>
-            <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+            <div className="flex items-center text-blue-600 font-semibold text-xs sm:text-sm group-hover:translate-x-2 transition-transform">
               Explore Services →
             </div>
           </div>
@@ -276,17 +276,17 @@ function SubServiceDetailModal({ subService, onClose }) {
       className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-hidden"
       onClick={onClose}
     >
-      <div className="flex items-center justify-center h-full p-4">
+      <div className="flex items-center justify-center h-full p-2 sm:p-4 pt-20 sm:pt-16">
         <div
           ref={scrollContainerRef}
-          className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto flex flex-col"
+          className="bg-white rounded-lg w-full max-w-2xl sm:max-w-4xl lg:max-w-4xl max-h-[calc(100vh-120px)] overflow-y-auto flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 flex justify-between items-start flex-shrink-0">
-          <div>
-            <h2 className="text-3xl font-bold">{subService.title}</h2>
-            <p className="text-blue-100 mt-2">{subService.description}</p>
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 sm:p-6 lg:p-8 flex justify-between items-start flex-shrink-0">
+          <div className="pr-4">
+            <h2 className="text-2xl sm:text-3xl font-bold">{subService.title}</h2>
+            <p className="text-blue-100 mt-2 text-xs sm:text-sm">{subService.description}</p>
           </div>
           <button
             onClick={onClose}
@@ -297,33 +297,33 @@ function SubServiceDetailModal({ subService, onClose }) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 min-h-0 p-8">
+        <div className="flex-1 min-h-0 p-4 sm:p-6 lg:p-8 pt-6 sm:pt-8 overflow-y-auto">
           {subService.detailedContent && subService.sections ? (
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {subService.sections.map((section, sidx) => (
-                <div key={sidx} className="bg-gray-50 p-6 rounded-lg border border-gray-300">
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{section.title}</h3>
+                <div key={sidx} className="bg-gray-50 p-4 sm:p-6 rounded-lg border border-gray-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3">{section.title}</h3>
                   {section.items ? (
                     <ul className="space-y-2">
                       {section.items.map((item, iidx) => (
-                        <li key={iidx} className="flex items-start text-sm text-gray-700">
+                        <li key={iidx} className="flex items-start text-xs sm:text-sm text-gray-700">
                           <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-sm text-gray-700 leading-relaxed">{section.description}</p>
+                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{section.description}</p>
                   )}
                 </div>
               ))}
             </div>
           ) : subService.features ? (
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Our Services</h3>
-              <ul className="space-y-3">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">Our Services</h3>
+              <ul className="space-y-2 sm:space-y-3">
                 {subService.features.map((feature, fidx) => (
-                  <li key={fidx} className="flex items-start text-sm text-gray-700 bg-gray-50 p-4 rounded-lg border border-gray-300">
+                  <li key={fidx} className="flex items-start text-xs sm:text-sm text-gray-700 bg-gray-50 p-3 sm:p-4 rounded-lg border border-gray-300">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-1.5 flex-shrink-0"></span>
                     <span>{feature}</span>
                   </li>
@@ -358,21 +358,21 @@ function ServiceDetailModal({ serviceId, onClose, onSelectSubService }) {
       className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-hidden"
       onClick={onClose}
     >
-      <div className="flex items-center justify-center h-full p-4">
+      <div className="flex items-center justify-center h-full p-2 sm:p-4 pt-20 sm:pt-16">
         <div
           ref={scrollContainerRef}
-          className="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto flex flex-col"
+          className="bg-white rounded-lg w-full max-w-2xl sm:max-w-5xl lg:max-w-6xl max-h-[calc(100vh-120px)] overflow-y-auto flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 flex justify-between items-start flex-shrink-0">
-          <div className="flex items-center gap-4">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-lg">
-              <IconComponent className="w-8 h-8" />
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 sm:p-6 lg:p-8 flex justify-between items-start flex-shrink-0 gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 bg-white bg-opacity-20 rounded-lg flex-shrink-0">
+              <IconComponent className="w-6 sm:w-8 h-6 sm:h-8" />
             </div>
-            <div>
-              <h2 className="text-3xl font-bold">{service.title}</h2>
-              <p className="text-blue-100 mt-2">{service.shortDesc}</p>
+            <div className="min-w-0">
+              <h2 className="text-xl sm:text-3xl font-bold truncate">{service.title}</h2>
+              <p className="text-blue-100 mt-1 sm:mt-2 text-xs sm:text-sm line-clamp-2">{service.shortDesc}</p>
             </div>
           </div>
           <button
@@ -385,15 +385,15 @@ function ServiceDetailModal({ serviceId, onClose, onSelectSubService }) {
 
         {/* Overview */}
         {service.overview && (
-          <div className="bg-blue-50 border-b border-blue-200 p-8 flex-shrink-0">
-            <p className="text-gray-700 leading-relaxed">{service.overview}</p>
+          <div className="bg-blue-50 border-b border-blue-200 p-4 sm:p-6 lg:p-8 flex-shrink-0">
+            <p className="text-xs sm:text-base text-gray-700 leading-relaxed">{service.overview}</p>
           </div>
         )}
 
         {/* Sub Services Grid */}
-        <div className="flex-1 min-h-0 p-8">
-          <h3 className="text-2xl font-bold text-slate-900 mb-8">Our {service.title} Services</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex-1 min-h-0 p-4 sm:p-6 lg:p-8 pt-6 sm:pt-8 overflow-y-auto">
+          <h3 className="text-lg sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-8">Our {service.title} Services</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {service.subServices.map((subService, idx) => {
               const isClickable = subService.title === 'Startup Advisory' || subService.detailedContent;
               return (
@@ -407,17 +407,17 @@ function ServiceDetailModal({ serviceId, onClose, onSelectSubService }) {
                   <img
                     src={subService.image}
                     alt={subService.title}
-                    className="w-full h-40 object-cover"
+                    className="w-full h-32 sm:h-40 object-cover"
                   />
-                  <div className="p-6">
-                    <h4 className="text-xl font-bold text-slate-900 mb-2">{subService.title}</h4>
-                    <p className="text-gray-700 mb-4 text-sm leading-relaxed">{subService.description}</p>
+                  <div className="p-4 sm:p-6">
+                    <h4 className="text-base sm:text-xl font-bold text-slate-900 mb-2">{subService.title}</h4>
+                    <p className="text-gray-700 mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed line-clamp-3">{subService.description}</p>
                     
                     {/* Features for services without detailed content */}
                     {!isClickable && subService.features && (
                       <div className="mt-4 pt-4 border-t border-gray-200">
                         <div className="text-xs font-semibold text-gray-700 mb-3">our Services</div>
-                        <ul className="space-y-2">
+                        <ul className="space-y-1 sm:space-y-2">
                           {subService.features.map((feature, fidx) => (
                             <li key={fidx} className="flex items-start text-xs text-gray-600">
                               <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 mt-1 flex-shrink-0"></span>
@@ -429,7 +429,7 @@ function ServiceDetailModal({ serviceId, onClose, onSelectSubService }) {
                     )}
                     
                     {isClickable && (
-                      <div className="flex items-center text-blue-600 font-semibold text-sm">
+                      <div className="flex items-center text-blue-600 font-semibold text-xs sm:text-sm">
                         View Details →
                       </div>
                     )}
@@ -478,14 +478,14 @@ function VentureServicesGrid({ onSelectService }) {
 
   return (
     <div>
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-slate-900 mb-4">Who We Serve</h2>
-        <p className="text-gray-600">Tailored solutions for diverse client segments across the financial ecosystem</p>
+      <div className="text-center mb-12 sm:mb-16 px-3">
+        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">Who We Serve</h2>
+        <p className="text-sm sm:text-base text-gray-600">Tailored solutions for diverse client segments across the financial ecosystem</p>
       </div>
       <div className="relative">
         <button
           onClick={goToPrevious}
-          className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-20 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+          className="absolute -left-16 top-1/2 transform -translate-y-1/2 z-20 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hidden lg:flex items-center justify-center"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -493,7 +493,7 @@ function VentureServicesGrid({ onSelectService }) {
         </button>
         <button
           onClick={goToNext}
-          className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-20 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+          className="absolute -right-16 top-1/2 transform -translate-y-1/2 z-20 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hidden lg:flex items-center justify-center"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -501,7 +501,7 @@ function VentureServicesGrid({ onSelectService }) {
         </button>
 
         {/* Cards Grid - 3 visible */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-2 sm:px-4">
           {getVisibleCards().map((service, idx) => {
             const IconComponent = service.icon;
             const isActive = service.id === ventureServices[currentIndex].id;
@@ -514,12 +514,12 @@ function VentureServicesGrid({ onSelectService }) {
                 }}
                 className={`group relative overflow-hidden rounded-xl transition-all duration-500 cursor-pointer transform ${
                   isActive
-                    ? 'bg-blue-500 text-white shadow-xl scale-105 border-2 border-blue-600'
+                    ? 'bg-blue-500 text-white shadow-xl scale-100 sm:scale-105 border-2 border-blue-600'
                     : 'bg-white text-slate-900 border-2 border-gray-200 hover:border-blue-400 hover:shadow-lg'
                 }`}
               >
                 {/* Image Background */}
-                <div className="relative h-40 overflow-hidden bg-gray-200">
+                <div className="relative h-32 sm:h-40 overflow-hidden bg-gray-200">
                   <img 
                     src={service.image} 
                     alt={service.title}
@@ -530,16 +530,16 @@ function VentureServicesGrid({ onSelectService }) {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-5 text-center">
+                <div className="relative z-10 p-3 sm:p-5 text-center">
                   <div className={`text-xs font-semibold mb-2 px-2 py-1 rounded-full inline-block transition-colors duration-300 ${
                     isActive ? 'bg-white/30 text-white' : 'bg-blue-100 text-blue-700'
                   }`}>
                     {service.category}
                   </div>
-                  <div className={`text-4xl mb-3 transition-all duration-300 ${isActive ? 'text-white scale-110' : 'text-blue-600 group-hover:scale-110'}`}>
+                  <div className={`text-3xl sm:text-4xl mb-2 sm:mb-3 transition-all duration-300 ${isActive ? 'text-white scale-110' : 'text-blue-600 group-hover:scale-110'}`}>
                     <IconComponent size={40} />
                   </div>
-                  <h3 className={`text-base font-bold mb-1 transition-colors duration-300 ${isActive ? 'text-white' : 'text-slate-900'}`}>
+                  <h3 className={`text-sm sm:text-base font-bold mb-1 transition-colors duration-300 ${isActive ? 'text-white' : 'text-slate-900'}`}>
                     {service.title}
                   </h3>
                   <p className={`text-xs leading-snug transition-colors duration-300 ${isActive ? 'text-blue-50' : 'text-gray-600'}`}>
@@ -547,13 +547,13 @@ function VentureServicesGrid({ onSelectService }) {
                   </p>
 
                   {isActive && (
-                    <div className="mt-4 pt-3 border-t border-white/30">
+                    <div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-white/30">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           onSelectService(service.id);
                         }}
-                        className="w-full py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 text-sm"
+                        className="w-full py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300 text-xs sm:text-sm"
                       >
                         View Details
                       </button>
@@ -575,16 +575,36 @@ function VentureServicesGrid({ onSelectService }) {
         </div>
       </div>
 
+      {/* Mobile Navigation Buttons */}
+      <div className="flex lg:hidden justify-center gap-3 mt-6">
+        <button
+          onClick={goToPrevious}
+          className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          onClick={goToNext}
+          className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full transition-all duration-300 hover:scale-110"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
       {/* Carousel Indicators */}
-      <div className="flex justify-center gap-3 mt-12">
+      <div className="flex justify-center gap-2 sm:gap-3 mt-8 sm:mt-12 flex-wrap">
         {ventureServices.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
             className={`transition-all duration-300 rounded-full ${
               idx === currentIndex
-                ? 'w-8 h-3 bg-blue-600'
-                : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
+                ? 'w-6 sm:w-8 h-2 sm:h-3 bg-blue-600'
+                : 'w-2 sm:w-3 h-2 sm:h-3 bg-gray-300 hover:bg-gray-400'
             }`}
           />
         ))}
@@ -609,51 +629,51 @@ function VentureServiceDetailModal({ serviceId, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-hidden">
-      <div className="flex items-center justify-center h-full p-4">
-        <div ref={scrollContainerRef} className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto flex flex-col">
-          <div className="sticky top-0 flex justify-between items-center p-6 border-b bg-white rounded-t-lg flex-shrink-0">
-          <h2 className="text-3xl font-bold text-slate-900">{service.title}</h2>
+      <div className="flex items-center justify-center h-full p-2 sm:p-4 pt-20 sm:pt-16">
+        <div ref={scrollContainerRef} className="bg-white rounded-lg w-full max-w-2xl sm:max-w-3xl max-h-[calc(100vh-120px)] overflow-y-auto flex flex-col">
+          <div className="sticky top-0 flex justify-between items-center p-4 sm:p-6 border-b bg-white rounded-t-lg flex-shrink-0 gap-4 z-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 truncate">{service.title}</h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 text-2xl"
+            className="text-gray-500 hover:text-gray-700 text-2xl flex-shrink-0"
           >
             ×
           </button>
         </div>
 
-        <div className="p-6 flex-1 min-h-0">
-          <p className="text-gray-700 leading-relaxed mb-8">
+        <div className="p-4 sm:p-6 pt-6 sm:pt-8 flex-1 min-h-0 overflow-y-auto">
+          <p className="text-xs sm:text-base text-gray-700 leading-relaxed mb-6 sm:mb-8">
             {service.overview}
           </p>
 
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-slate-900 mb-4">Key Features</h3>
+          <div className="bg-blue-50 p-4 sm:p-6 rounded-lg">
+            <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4">Key Features</h3>
             <ul className="space-y-2">
-              <li className="flex items-center text-gray-700">
+              <li className="flex items-center text-xs sm:text-base text-gray-700">
                 <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                 Expert consultation and guidance
               </li>
-              <li className="flex items-center text-gray-700">
+              <li className="flex items-center text-xs sm:text-base text-gray-700">
                 <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                 Proven track record in this field
               </li>
-              <li className="flex items-center text-gray-700">
+              <li className="flex items-center text-xs sm:text-base text-gray-700">
                 <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                 Dedicated support from experienced professionals
               </li>
-              <li className="flex items-center text-gray-700">
+              <li className="flex items-center text-xs sm:text-base text-gray-700">
                 <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                 Customized solutions for your needs
               </li>
-              <li className="flex items-center text-gray-700">
+              <li className="flex items-center text-xs sm:text-base text-gray-700">
                 <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                 Comprehensive market insights and analysis
               </li>
             </ul>
           </div>
 
-          <div className="mt-8 text-center">
-            <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg">
+          <div className="mt-6 sm:mt-8 text-center">
+            <a href="/contact" className="inline-block px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm sm:text-base">
               Get Started
             </a>
           </div>
@@ -698,15 +718,15 @@ function ServicesPage() {
       <ServiceHero />
 
       {/* Main Services Section */}
-      <section id="main-services-section" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="main-services-section" className="py-8 sm:py-12 lg:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           <MainServicesGrid onSelectService={setSelectedService} />
         </div>
       </section>
 
       {/* Venture Services Section */}
-      <section id="venture-services-section" className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="venture-services-section" className="py-8 sm:py-12 lg:py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           <VentureServicesGrid onSelectService={setSelectedVentureService} />
         </div>
       </section>
