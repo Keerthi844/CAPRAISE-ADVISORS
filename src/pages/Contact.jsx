@@ -160,6 +160,7 @@ return (
         <div className="relative z-10 bg-white p-3 rounded-[30px] shadow-2xl">
           <img
             src="https://st5.depositphotos.com/9999814/66329/i/450/depositphotos_663291694-stock-photo-two-business-people-shake-hand.jpg"
+            alt="Business people shaking hands"
             className="w-72 h-72 object-cover rounded-[25px]"
           />
         </div>
@@ -284,6 +285,7 @@ return (
       <div className="rounded-lg overflow-hidden shadow-lg">
 
         <iframe
+          title="Capraise Advisors Location - Hyderabad"
           src="https://www.google.com/maps?q=Hyderabad&output=embed"
           width="100%"
           height="450"
@@ -312,6 +314,7 @@ return (
     <a
       href="https://www.instagram.com/capraiseadvisors/"
       target="_blank"
+      rel="noreferrer"
       className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-lg"
     >
       📸 Instagram
