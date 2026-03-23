@@ -30,7 +30,7 @@ function Footer() {
     },
     {
       name: 'Phone',
-      url: 'tel:+919876543210',
+      url: 'tel:+919640331188',
       icon: FaPhone,
       color: 'hover:bg-green-500'
     },
