@@ -6,7 +6,7 @@ function Team() {
       id: 1,
       name: 'Kaushik Krishna',
       title: 'Vice President, Tata Group',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+      image: '/Assets/Home/Kowsik.png',
       description:
         'Dynamic business leader with proven expertise in new business development, M&A, joint ventures, and product launches. Specializes in quality assurance, customer advocacy, and process excellence.',
       expertise: ['Business Development', 'M&A', 'Product Launch', 'P&L Management']
@@ -15,7 +15,7 @@ function Team() {
       id: 2,
       name: 'Devender Kodam',
       title: 'CFO, Capraise Advisors',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop',
+      image: '/Assets/Home/Devendar.jpeg',
       description:
         'Qualified Chartered Accountant with experience across accounting, auditing, taxation, business valuation, debt syndication and private equity advisory. Managing Partner of D K M H and Company.',
       expertise: ['Accounting', 'Auditing', 'Taxation', 'Business Valuation']
@@ -24,7 +24,7 @@ function Team() {
       id: 3,
       name: 'Lokesh',
       title: 'Practice Director',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop',
+      image: '/Assets/Home/Lokesh.png',
       description:
         'Accomplished Practice Director with extensive experience in leading IT consulting operations, strategic client engagements, and business transformation initiatives.',
       expertise: ['IT Consulting', 'Client Relations', 'Strategic Planning', 'Business Transformation']

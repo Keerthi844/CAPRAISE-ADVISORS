@@ -12,19 +12,19 @@ function Footer() {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/capraiseadvisors/',
+      url: 'https://www.instagram.com/capraiseadvisors3107/',
       icon: FaInstagram,
       color: 'hover:bg-pink-500'
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/company/capraiseadvisors',
+      url: 'https://www.linkedin.com/company/113021111/admin/dashboard/',
       icon: FaLinkedin,
       color: 'hover:bg-blue-600'
     },
     {
       name: 'Twitter',
-      url: 'https://www.twitter.com/capraiseadvisors',
+      url: 'https://x.com/capraise48004',
       icon: FaTwitter,
       color: 'hover:bg-sky-400'
     },
@@ -75,15 +75,15 @@ function Footer() {
             <div className="space-y-4 text-blue-100 mb-6">
               <div className="flex items-start gap-3">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-white" size={16} />
-                <p className="text-sm">Office 2nd Floor, Sriram plaza Vittal Rao Nagar, Madhapur, Hyderabad.</p>
+                <p className="text-sm">Flat 201, 2nd Floor, Saptagiri Residency, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016</p>
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="flex-shrink-0 text-white" size={16} />
-                <a href="mailto:support@capraiseadvisors.com" className="text-sm hover:text-white transition">support@capraiseadvisors.com</a>
+                <a href="mailto:support@capraiseadvisors.com" className="text-sm hover:text-white transition">info@capraiseadvisors.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <FaPhone className="flex-shrink-0 text-white" size={16} />
-                <a href="tel:+919876543210" className="text-sm hover:text-white transition">+91 6305675199</a>
+                <a href="tel:+919876543210" className="text-sm hover:text-white transition">+91 9640331188</a>
               </div>
             </div>
 

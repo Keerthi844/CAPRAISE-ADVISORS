@@ -118,32 +118,32 @@ return (
         <h2 className="text-4xl font-bold text-gray-800 mb-8">Contact Us</h2>
 
         <div className="flex items-center mb-6">
-          <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-blue-500 text-blue-600 mr-4">
-            <FiMapPin size={24} />
+          <div className="w-14 h-14 flex items-center justify-center rounded-full border-3 border-blue-400 bg-blue-50 text-blue-600 mr-4 flex-shrink-0">
+            <FiMapPin size={28} />
           </div>
           <div>
             <h4 className="font-semibold text-lg">Address:</h4>
-            <p className="text-gray-600">Hyderabad, India</p>
+            <p className="text-gray-600">Flat 201, 2nd Floor, Saptagiri Residency, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016</p>
           </div>
         </div>
 
         <div className="flex items-center mb-6">
-          <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-green-500 text-green-600 mr-4">
-            <FiPhone size={24} />
+          <div className="w-14 h-14 flex items-center justify-center rounded-full border-3 border-teal-400 bg-teal-50 text-teal-600 mr-4 flex-shrink-0">
+            <FiPhone size={28} />
           </div>
           <div>
             <h4 className="font-semibold text-lg">Contact Numbers:</h4>
-            <p className="text-gray-600">+91-8985224309</p>
+            <p className="text-gray-600">+91-9640331188</p>
           </div>
         </div>
 
         <div className="flex items-center">
-          <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-orange-500 text-orange-600 mr-4">
-            <FiMail size={24} />
+          <div className="w-14 h-14 flex items-center justify-center rounded-full border-3 border-orange-400 bg-orange-50 text-orange-600 mr-4 flex-shrink-0">
+            <FiMail size={28} />
           </div>
           <div>
             <h4 className="font-semibold text-lg">Email Address:</h4>
-            <p className="text-gray-600">info@capraise.com</p>
+            <p className="text-gray-600">info@capraiseadvisors.com</p>
           </div>
         </div>
 
@@ -286,11 +286,13 @@ return (
 
         <iframe
           title="Capraise Advisors Location - Hyderabad"
-          src="https://www.google.com/maps?q=Hyderabad&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3526584160927!2d78.4636199!3d17.442826999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb910077a7e1c5%3A0x44d34c2a36e3962e!2sD%20K%20M%20H%20AND%20COMPANY!5e0!3m2!1sen!2sin!4v1774265594905!5m2!1sen!2sin"
           width="100%"
           height="450"
           style={{ border: 0 }}
           loading="lazy"
+          allowFullScreen=""
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
 
       </div>
@@ -312,7 +314,7 @@ return (
     </p>
 
     <a
-      href="https://www.instagram.com/capraiseadvisors/"
+      href="https://www.instagram.com/capraiseadvisors3107/"
       target="_blank"
       rel="noreferrer"
       className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-lg"
