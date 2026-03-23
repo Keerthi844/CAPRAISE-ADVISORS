@@ -57,7 +57,7 @@ function Team() {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-blue-300"
+                className="w-56 h-56 rounded-full mx-auto mb-6 object-contain border-4 border-blue-300"
               />
 
               <h3 className="text-2xl font-bold text-blue-800 text-center mb-1">
