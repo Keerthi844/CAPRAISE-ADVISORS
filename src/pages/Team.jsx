@@ -38,7 +38,7 @@ function Team() {
         <h1 className="text-5xl font-bold text-blue-800 mb-4 motion-fade-in">
           Our Leadership Team
         </h1>
-        <p className="text-xl text-blue-700 max-w-3xl mx-auto motion-fade-in" style={{animationDelay: '0.2s'}}>
+        <p className="text-xl text-black max-w-3xl mx-auto motion-fade-in" style={{animationDelay: '0.2s'}}>
           Meet the experienced professionals driving Capraise Advisors' vision and success.
         </p>
       </div>
