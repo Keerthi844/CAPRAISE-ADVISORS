@@ -57,7 +57,7 @@ function Team() {
               <img
                 src={member.image}
                 alt={member.name}
-                className={`w-64 h-64 rounded-full mx-auto mb-6 object-contain border-4 border-blue-300 ${member.id === 3 ? 'object-bottom' : ''}`}
+                className="w-56 h-56 rounded-full mx-auto mb-6 object-cover object-top border-4 border-blue-300 shadow-lg"
               />
 
               <h3 className="text-2xl font-bold text-blue-800 text-center mb-1">
