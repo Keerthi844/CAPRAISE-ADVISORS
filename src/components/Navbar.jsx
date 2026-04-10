@@ -53,16 +53,61 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <Link to="/" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</Link>
-          <Link to="/services" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</Link>
-          <Link to="/team" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Why Capraise Advisors</Link>
-          <Link to="/careers" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</Link>
-          <Link to="/contact" onClick={() => setMenuOpen(false)} className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</Link>
-        </div>
-      )}
+   {/* Overlay */}
+{menuOpen && (
+  <div
+    onClick={() => setMenuOpen(false)}
+    className="fixed inset-0 bg-black/40 z-[9998] md:hidden"
+  />
+)}
+
+{/* Side Drawer */}
+<div
+  className={`
+    fixed top-0 right-0 h-full w-[70%] sm:w-[50%] bg-white shadow-lg z-[9999]
+    transform transition-transform duration-300
+    ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
+    md:hidden
+  `}
+>
+
+  {/* Close Button */}
+  <button
+    onClick={() => setMenuOpen(false)}
+    className="absolute top-4 right-4 text-gray-600 text-2xl"
+  >
+    ✕
+  </button>
+
+  {/* Menu Items */}
+  <div className="flex flex-col mt-16">
+
+    <Link to="/" onClick={() => setMenuOpen(false)} className="px-6 py-2 text-lg  hover:bg-gray-50">
+      Home
+    </Link>
+
+    <Link to="/about" onClick={() => setMenuOpen(false)} className="px-6 py-2 text-lg  hover:bg-gray-50">
+      About
+    </Link>
+
+    <Link to="/services" onClick={() => setMenuOpen(false)} className="px-6 py-2 text-lg  hover:bg-gray-50">
+      Services
+    </Link>
+
+    <Link to="/team" onClick={() => setMenuOpen(false)} className="px-6 py-2 text-lg  hover:bg-gray-50">
+      Why Capraise Advisors
+    </Link>
+
+    <Link to="/careers" onClick={() => setMenuOpen(false)} className="px-6 py-2 text-lg  hover:bg-gray-50">
+      Careers
+    </Link>
+
+    <Link to="/contact" onClick={() => setMenuOpen(false)} className="px-6 py-2 text-lg  hover:bg-gray-50">
+      Contact
+    </Link>
+
+  </div>
+</div>
     </nav>
   );
 }
