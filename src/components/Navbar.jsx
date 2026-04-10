@@ -6,19 +6,15 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-[9999] w-full">
-    <div className="w-full px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center gap-2">
-            <Link to="/" className="flex items-center gap-2">
+      <div className="w-full px-2">
+        <div className="flex justify-between items-center h-16">
 
-              {/* LOGO IMAGE */}
-              <img
-                src="/Assets/Home/CAP.png"
-                alt="Capraise Logo"
-                className="h-40 md:h-40 lg:h-40 w-auto object-contain"
-              />
-
-            </Link>
+          <div className="flex items-left gap-0 m-0 p-0">
+            <img
+              src="/Assets/Home/CAP.png"
+              alt="Capraise Logo"
+              className="h-14 w-auto object-contain block m-0 p-0 "
+            />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
