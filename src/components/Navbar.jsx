@@ -11,7 +11,7 @@ function Navbar() {
 
           <div className="flex items-left gap-0 m-0 p-0">
             <img
-              src="/Assets/Home/CAP.png"
+              src="/Images/CAP.png"
               alt="Capraise Logo"
               className="h-14 w-auto object-contain block m-0 p-0 "
             />

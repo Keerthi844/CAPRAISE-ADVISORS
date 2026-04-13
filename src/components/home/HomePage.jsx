@@ -7,11 +7,11 @@ function HeroSection() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const carouselImages = [
-        { src: '/Assets/Home/Banner.jpg', alt: 'Business Meeting' },
-        { src: '/Assets/Home/Businesses.jpg', alt: 'Business Success' },
-        { src: '/Assets/Home/funding.jpg', alt: 'Funding Solutions' },
-        { src: '/Assets/Home/Restructuring.jpg', alt: 'Restructuring Services' },
-        { src: '/Assets/Home/Advisory.jpg', alt: 'Advisory Services' }
+        { src: '/Images/Banner.jpg', alt: 'Business Meeting' },
+        { src: '/Images/Businesses.jpg', alt: 'Business Success' },
+        { src: '/Images/funding.jpg', alt: 'Funding Solutions' },
+        { src: '/Images/Restructuring.jpg', alt: 'Restructuring Services' },
+        { src: '/Images/Advisory.jpg', alt: 'Advisory Services' }
     ];
 
     const nextImage = () => {
@@ -149,7 +149,7 @@ function HighlightsSection() {
                     <div className="motion-float">
                         <div className="relative group">
                             <img
-                                src="/Assets/Home/Businesses.jpg"
+                                src="/Images/Businesses.jpg"
                                 alt="Success Stories"
                                 className="relative rounded-2xl w-full h-auto object-cover shadow-lg group-hover:shadow-xl transition-all duration-300"
                             />
@@ -191,7 +191,7 @@ function ServicesPreview() {
             icon: FiDollarSign,
             title: 'Fundraising',
             description: 'Debt syndication, private equity syndication, and M&A advisory to meet your funding needs.',
-            image: '/Assets/Home/funding.jpg',
+            image: '/Images/funding.jpg',
             delay: '0s'
         },
         {
@@ -199,7 +199,7 @@ function ServicesPreview() {
             icon: FiRefreshCw,
             title: 'Restructuring',
             description: 'Financial, operational, organizational, and strategic restructuring for sustainable growth.',
-            image: '/Assets/Home/Restructuring.jpg',
+            image: '/Images/Restructuring.jpg',
             delay: '0.2s'
         },
         {
@@ -207,7 +207,7 @@ function ServicesPreview() {
             icon: FiBarChart2,
             title: 'Advisory',
             description: 'Startup, capital market, corporate, family office, and special situations advisory.',
-            image: '/Assets/Home/Advisory.jpg',
+            image: '/Images/Advisory.jpg',
             delay: '0.4s'
         }
     ];
