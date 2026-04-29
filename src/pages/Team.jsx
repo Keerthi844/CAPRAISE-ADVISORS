@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Team() {
+  const [expandedId, setExpandedId] = useState(null);
+
   const teamMembers = [
     {
       id: 1,
@@ -27,6 +29,13 @@ function Team() {
       image: '/images/Lokesh.png',
       description:
         'Accomplished Practice Director with extensive experience in leading IT consulting operations, strategic client engagements, and business transformation initiatives.',
+      expertise: ['IT Consulting', 'Client Relations', 'Strategic Planning', 'Business Transformation']
+    },{
+      id: 4,
+      name: 'Saravanan',
+      title: 'Practice Director',
+      image: '/images/saravan.jpeg',
+      description: "Saravanan is a distinguished global executive and a visionary architect of digital resilience, uniquely positioned to lead at the high-stakes intersection of sovereign interests and frontier science. With a career defined by steering mission-critical technology for the world’s most prestigious institutions—including NASA, the CEA, and the European Union—he possesses a sophisticated mastery of navigating complex regulatory landscapes and zero-failure environments. A multilingual leader with a proven track record across top Fortune 500 Indistrial sectors, Saravanan harmonizes AI-driven innovation with the rigorous data integrity required in biotechnology, nanotechnology, and pharmaceuticals. He is a transformative leader who bridges the gap between breakthrough R&D and global operational scalability, ensuring that the world’s most sensitive intellectual property is both protected and propelled forward",
       expertise: ['IT Consulting', 'Client Relations', 'Strategic Planning', 'Business Transformation']
     }
   ];
@@ -68,9 +77,26 @@ function Team() {
                 {member.title}
               </p>
 
-              <p className="text-gray-700 text-center mb-6 leading-relaxed">
-                {member.description}
-              </p>
+           <div className="text-center mb-6">
+  <p className="text-gray-700 leading-relaxed">
+    {expandedId === member.id
+      ? member.description
+      : `${member.description.slice(0, 120)}${
+          member.description.length > 120 ? "..." : ""
+        }`}
+  </p>
+
+  {member.description.length > 120 && (
+    <button
+      onClick={() =>
+        setExpandedId(expandedId === member.id ? null : member.id)
+      }
+      className="mt-2 text-blue-600 font-semibold text-sm hover:underline"
+    >
+      {expandedId === member.id ? "Show Less" : "Read More"}
+    </button>
+  )}
+</div>
 
               <div className="flex flex-wrap gap-2 justify-center">
                 {member.expertise.map((skill) => (
